@@ -17,9 +17,10 @@ public class HoraSistema {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        //Criado objeto a partir da biblioteca importada
         Date relogio = new Date();
-        System.out.println(relogio.toString());
+        //Impressão do objeto a partir do método.
+        System.out.println("A data e hora do sistema é: " + relogio.toString());
     }
-    
+
 }

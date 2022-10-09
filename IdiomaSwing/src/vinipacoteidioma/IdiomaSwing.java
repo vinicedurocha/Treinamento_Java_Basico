@@ -81,8 +81,9 @@ public class IdiomaSwing extends javax.swing.JFrame {
 
     private void btnidiomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnidiomaActionPerformed
         // TODO add your handling code here:
-        
-         Locale loc = Locale.getDefault();
+        //Criando novo objeto a partir da classe importada "Locale"
+        Locale loc = Locale.getDefault();
+        //Alterando a string com metodo setter para o idioma do sistema operacional.
         jbnidioma.setText(loc.getDisplayLanguage());
     }//GEN-LAST:event_btnidiomaActionPerformed
 
