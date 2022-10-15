@@ -15,8 +15,6 @@ public class TelaIdade extends javax.swing.JFrame {
      */
     public TelaIdade() {
         initComponents();
-        int ano = 0 ;
-        txtAno.setText(Integer.toString(ano));
     }
 
     /**
@@ -78,9 +76,8 @@ public class TelaIdade extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtAno, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(97, 97, 97)
+                        .addComponent(txtAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(94, 94, 94))
         );
         layout.setVerticalGroup(
@@ -108,19 +105,14 @@ public class TelaIdade extends javax.swing.JFrame {
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
-
-        //Criando varíavel ano e movendo o valor digitado na inteface para ela. Também há conversão do texto para inteiro.
+        
         int ano = Integer.parseInt(txtAno.getText());
-        //Subtraindo ano atual pelo informado.
         int idade = 2022 - ano;
-        //Alterando o texto do field de idade para o resultado. Também há conversão do inteiro para string/texto.
         lblIdade.setText(Integer.toString(idade));
-        //Criando variável do tipo string com uma condição booleana.
-        String sit = (idade >= 18) ? "Maior" : "Menor";
-        //Ajustando resultado da string de acordo com a condição anterior;
-        lblSituacao.setText(sit);
-
-
+        
+        
+        
+        
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
