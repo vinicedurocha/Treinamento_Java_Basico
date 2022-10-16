@@ -14,11 +14,10 @@ public class Curso {
 
     //Métodos construtor
     public Curso() {
-       this.setListaAula(new ArrayList<>());
+        this.setListaAula(new ArrayList<>());
 
     }
 
-//Métodos construtor com default
     public Curso(String nome_curso, int num_aulas, String publico_alvo, int ano_lancamento) {
         this.nome_curso = nome_curso;
         this.num_aulas = num_aulas;
@@ -26,8 +25,8 @@ public class Curso {
         this.ano_lancamento = ano_lancamento;
         this.listaAula = new ArrayList<Aula>();
     }
-    
 
+    //Métodos de acesso padrão
     public List<Aula> getListaAula() {
         return listaAula;
     }
@@ -36,7 +35,6 @@ public class Curso {
         this.listaAula = listaAula;
     }
 
-    //Métodos de acesso padrão
     public String getNome_curso() {
         return nome_curso;
     }
@@ -69,6 +67,7 @@ public class Curso {
         this.ano_lancamento = ano_lancamento;
     }
 
+    //Metodo de sobreposição
     @Override
     public String toString() {
         return "Curso = " + nome_curso

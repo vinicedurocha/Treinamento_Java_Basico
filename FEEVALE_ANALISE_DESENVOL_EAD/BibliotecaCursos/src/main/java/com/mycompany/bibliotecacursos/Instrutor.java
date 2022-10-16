@@ -1,9 +1,5 @@
 package com.mycompany.bibliotecacursos;
 
-/**
- *
- * @author Rocha
- */
 import java.util.Scanner;
 
 public class Instrutor {
@@ -12,12 +8,11 @@ public class Instrutor {
     private String nome;
     private String email;
 
-    //Métodos Construtor  
+    //Métodos construtor 
     public Instrutor() {
 
     }
 
-    //Método construtor com default
     public Instrutor(String nome, String email) {
         this.nome = nome;
         this.email = email;
@@ -25,6 +20,7 @@ public class Instrutor {
     }
 
     Instrutor(String nextLine) {
+
     }
 
     //Métodos de acesso
@@ -44,8 +40,11 @@ public class Instrutor {
         this.email = email;
     }
 
-    //Médtodo de impressão do objeto/estado atual
-    public String imprimir() {
-        return nome + " - " + email;
+    //Método de sobreposição
+    @Override
+    public String toString() {
+        return "Instrutor{" + "nome=" + nome
+                + "\n, email=" + email + '}';
     }
+
 }

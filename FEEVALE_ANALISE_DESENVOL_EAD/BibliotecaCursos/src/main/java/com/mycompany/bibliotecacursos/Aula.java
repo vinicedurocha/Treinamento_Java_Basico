@@ -1,15 +1,18 @@
 package com.mycompany.bibliotecacursos;
 
-/**
- *
- * @author Rocha
- */
+//Classe criada com conceito de herança.
 public class Aula extends Curso {
 
+    //Atributos
     private int numero;
     private String assunto;
     private float totHoras;
     private Instrutor instrutor;
+
+    //Método construtor sem default.
+    public Aula() {
+    }
+    //Método construtor com default
 
     public Aula(int numero, String assunto, float totHoras, Instrutor instrutor) {
         this.numero = numero;
@@ -18,10 +21,7 @@ public class Aula extends Curso {
         this.instrutor = instrutor;
     }
 
-    public Aula() {
-    }
-    
-
+    //Métodos de acesso.
     public Instrutor getInstrutor() {
         return instrutor;
     }
@@ -54,6 +54,7 @@ public class Aula extends Curso {
         this.totHoras = totHoras;
     }
 
+    //Método personalizado
     public void exibir() {
         System.out.println("Assunto: " + assunto);
         System.out.println("Ministrada por: " + instrutor.getNome());
@@ -61,11 +62,11 @@ public class Aula extends Curso {
         System.out.println("Do curso:" + super.getNome_curso());
     }
 
+    //Metodo de sobreposição
     @Override
     public String toString() {
-        return "Aula{" + "numero=" + numero + ", assunto=" + assunto + ", totHoras=" + totHoras + ", instrutor=" + instrutor + '}';
+        return "Aula{" + "numero=" + numero + "\n, assunto=" + assunto + "\n, totHoras=" 
+                + totHoras + "\n, instrutor=" + instrutor + '}';
     }
-    
-    
 
 }

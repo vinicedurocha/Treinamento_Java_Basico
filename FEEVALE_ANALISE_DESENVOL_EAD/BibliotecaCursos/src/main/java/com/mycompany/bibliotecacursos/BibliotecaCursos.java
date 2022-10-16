@@ -1,9 +1,5 @@
 package com.mycompany.bibliotecacursos;
 
-/**
- *
- * @author Rocha
- */
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -23,6 +19,7 @@ public class BibliotecaCursos {
         }
     }
 
+    //Exibição do menu
     private static boolean exibirMenu() {
         System.out.println("========= Biblioteca de Cursos ========");
         System.out.println("1- Criar curso ");
@@ -33,6 +30,7 @@ public class BibliotecaCursos {
         return aceitaMenu(Integer.parseInt(leitor.nextLine())) == 4;
     }
 
+    //Opções do menu
     private static Integer aceitaMenu(Integer escolha) {
         switch (escolha) {
             case 1:
@@ -50,6 +48,7 @@ public class BibliotecaCursos {
         }
         return escolha;
     }
+//Criando o curso
 
     private static void criarCurso() {
         Curso curso = new Curso();
@@ -64,6 +63,7 @@ public class BibliotecaCursos {
 
     }
 
+    //Aceitação das aulas para curso.
     private static void aceitaAula(Curso curso) {
         while (true) {
             System.out.println(" Deseja inserir uma aula?[S/N] ");
@@ -76,6 +76,7 @@ public class BibliotecaCursos {
         }
     }
 
+    //Pesquisando cursos
     private static void pesquisarCurso() {
         System.out.print(" Escreva o nome do Curso: ");
         String titulo = leitor.nextLine();
@@ -86,6 +87,7 @@ public class BibliotecaCursos {
         }
 
     }
+//Deletando curso
 
     private static void removerCurso() {
         System.out.print(" Escreva o nome do Curso: ");
@@ -97,6 +99,7 @@ public class BibliotecaCursos {
         }
     }
 
+    // Saindo do menu/curso
     private static void sairCurso() {
         System.out.print("##  Saindo do menu ##");
         mapCursos.entrySet().size();
@@ -104,6 +107,7 @@ public class BibliotecaCursos {
 
     }
 
+    //Coletando dados da aula
     private static Aula coletaDados() {
         //Coleta dados da aula
         Aula aula = new Aula();
@@ -117,6 +121,7 @@ public class BibliotecaCursos {
         System.out.println("Informe o instrutor:");
         aula.setInstrutor(new Instrutor(leitor.nextLine()));
         return aula;
+
     }
 
     public static Scanner getLeitor() {
